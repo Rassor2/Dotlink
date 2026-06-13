@@ -1,0 +1,95 @@
+{
+  "theme": "dark",
+  "archetype": "5",
+  "archetype_name": "Luxury Cosmic",
+  "colors": {
+    "background": "#000000",
+    "surface": "#0A0A0A",
+    "surface_glass": "rgba(255, 255, 255, 0.03)",
+    "border": "rgba(255, 255, 255, 0.1)",
+    "text_primary": "#FFFFFF",
+    "text_secondary": "#A3A3A3",
+    "accent_gold": "#F5C518",
+    "worlds": {
+      "lumina": "#86EFAC",
+      "aurora": "#047857",
+      "zenith": "#F5C518",
+      "eclipse": "#EA580C",
+      "void": "#D946EF"
+    }
+  },
+  "typography": {
+    "headings": {
+      "family": "Bodoni Moda",
+      "weight": "font-bold",
+      "letter_spacing": "tracking-tighter"
+    },
+    "body": {
+      "family": "Outfit",
+      "weight": "font-light",
+      "letter_spacing": "tracking-normal"
+    },
+    "sizes": {
+      "h1": "text-5xl sm:text-6xl md:text-7xl",
+      "h2": "text-3xl sm:text-4xl md:text-5xl",
+      "h3": "text-xl sm:text-2xl",
+      "body": "text-base sm:text-lg",
+      "small": "text-sm tracking-[0.2em] uppercase"
+    }
+  },
+  "layout": {
+    "container": "max-w-7xl mx-auto px-6 lg:px-12",
+    "spacing": "py-24 sm:py-32",
+    "hero": {
+      "alignment": "left",
+      "structure": "Asymmetric, text heavily weighted on the left, cosmic glowing visual effects trailing off to the right."
+    },
+    "features": {
+      "structure": "Bento Grid (Mode A: The Tetris Grid) with 5 distinct slots for each world, mixing 3 shapes to create tension."
+    }
+  },
+  "components": {
+    "button_primary": "rounded-full bg-[#F5C518] text-black font-semibold hover:bg-[#D4A915] transition-all px-8 py-4 flex items-center justify-center gap-2",
+    "button_secondary": "rounded-full bg-[#000000] border border-white/10 text-white hover:border-[#F5C518]/50 hover:shadow-[0_0_20px_rgba(245,197,24,0.15)] transition-all px-8 py-4 flex items-center justify-center gap-2",
+    "store_badge": "rounded-xl bg-[#050505] border border-white/15 flex flex-col items-start justify-center px-6 py-3 hover:border-white/30 transition-all min-w-[180px] relative overflow-hidden group",
+    "cards": "bg-[#050505] border border-white/5 rounded-2xl overflow-hidden hover:border-white/10 transition-colors duration-300"
+  },
+  "visual_effects": {
+    "background": "Pure black #000000. Add absolute positioned div with subtle animated golden dust (particles) and an ambient amber radial gradient glow masked to the edges.",
+    "typography_highlight": "The 'Link' in 'Dot Link' should be colored #F5C518 and potentially have a subtle text-shadow for a glowing effect.",
+    "card_glows": "Each world card in the Bento grid should feature a subtle, soft radial gradient matching its specific world color (e.g., Lumina gets a faint #86EFAC glow in the corner)."
+  },
+  "media": {
+    "background_golden_dust": "https://images.unsplash.com/photo-1703100837481-d2f2cdb1d85e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwxfHxkYXJrJTIwZGVlcCUyMHNwYWNlJTIwZ29sZGVuJTIwZ2xvd2luZyUyMGR1c3QlMjBzdGFyZmllbGR8ZW58MHx8fHwxNzgxMzQ5MjQ3fDA&ixlib=rb-4.1.0&q=85",
+    "abstract_golden_halo": "https://images.unsplash.com/photo-1766602175569-c45bfbe9d418?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODh8MHwxfHNlYXJjaHwyfHxhYnN0cmFjdCUyMGJsYWNrJTIwYmFja2dyb3VuZCUyMHdpdGglMjBnb2xkZW4lMjBhbWJlciUyMGhhbG8lMjBsaWdodHxlbnwwfHx8fDE3ODEzNDkyNDd8MA&ixlib=rb-4.1.0&q=85",
+    "cosmic_nodes": "https://images.unsplash.com/photo-1644088379091-d574269d422f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwxfHxjb3NtaWMlMjBjb25zdGVsbGF0aW9uJTIwYWJzdHJhY3QlMjBub2RlcyUyMGxpbmVzfGVufDB8fHx8MTc4MTM0OTI0N3ww&ixlib=rb-4.1.0&q=85"
+  },
+  "pages": {
+    "home": {
+      "sections": [
+        "Hero: Large Title 'Dot Link' + Tagline 'Un voyage cosmique — Relie les étoiles. Trace la voie. Remplis l'infini.' + Store Badges ('Bientôt disponible')",
+        "Features: Grid highlighting 400 niveaux, skins, classement",
+        "Worlds: 5 distinct visual cards for Lumina, Aurora, Zenith, Eclipse, Void",
+        "Stores CTA Section: Repeated call to action to anticipate the launch",
+        "Footer: Publisher 'RelaxPlay One', Contact 'marre199@proton.me', Links to legal pages"
+      ]
+    },
+    "legal": {
+      "sections": [
+        "Standard narrow content column (max-w-3xl), high readability text, minimal styling",
+        "Available Pages: Politique de confidentialité, CGU, Mentions légales, Politique de remboursement"
+      ]
+    }
+  },
+  "instructions_to_main_agent": [
+    "Build the application using React and Tailwind CSS exclusively in .js files (NOT .tsx).",
+    "Enforce pure black background globally (`bg-black`). Do not use gray or tinted darks for the main canvas.",
+    "Use Bodoni Moda for headings and Outfit for body text. Apply them directly via standard Tailwind utility classes after configuring tailwind.config.js.",
+    "CRITICAL: Apply `data-testid` attributes to all interactive and key informational elements.",
+    "The Hero section must be asymmetric. Text on the left. In the Hero, the word 'Link' in 'Dot Link' should use the gold accent color #F5C518.",
+    "For the Worlds section, utilize a Bento Grid. Display the 5 worlds using their authentic colors as faint glowing accents inside black cards.",
+    "The store badges should be custom designs indicating 'Bientôt disponible' and featuring the Apple and Google Play icons (use lucide-react).",
+    "Integrate the background images provided in the media section, using opacity and mix-blend modes (e.g., `opacity-20`, `mix-blend-screen`) behind the hero text to create the cosmic dusty atmosphere.",
+    "Ensure all legal pages are built and routed appropriately with standard template content, ensuring compliance with Apple/Google/Stripe requirements."
+  ]
+}
